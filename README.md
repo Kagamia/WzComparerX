@@ -7,11 +7,17 @@ WzComparerX
 WzComparer的历史
 --------------------
 
+![wzcpmare](https://github.com/Kagamia/WzComparerX/blob/master/images/wc-icon.jpg)
+
 WzComparer项目最早启动于2010年6月，产生于Exprg冒险岛社区小组的闲聊中。当时世界上已经出现了很多冒险岛提取器，比如**HaRepacker**(Haha's repacker, HR), **wzextract**(Fiel), **火人提取器**，**Exrpg Extractor系列**等。Exrpg论坛在当时一直致力于冒险岛世界各个服务器更新内容的最新资讯，于是有人发出疑问，“为什么没有一个提取器能够对比客户端的详细变化呢？”。一周后，WzComparer第一个版本诞生。
 
 WzComparer最初的版本非常简陋，它的基础代码完全是基于wzextract3.4的复制粘贴，因为wzextract是存在img级别变化对比功能的（基于img校验和的存档文件）。当时的作者对C#语言也并不熟悉（甚至连treeview控件也是第一次见），仅凭摸索与尝试，在很短的时间内完成了这个功能，并在KMST的下次更新实现了**基于客户端变化的精确对比**，于是WzComparer的名字由此诞生。
 
+![old wzcompare UI](https://github.com/Kagamia/WzComparerX/blob/master/images/1-old-wzcompare.jpg)
+
 随后的三年，WzComparer也增加了大量和提取无关的功能，比如wz搜索与string.wz搜索模块，角色状态模拟与加点模拟，装备与buff模拟（也就是如今CharaSim的前身），与766数据库的联动自动更新模块（内部功能），简易地图模拟（初版中只能显示obj和tile的静态帧，没有动画），本地数据库（access文件数据库）。随着使用用户越来越多，以及功能的越来越臃肿难以维护，WzComparer进行了第一次重构，于2013年初开启了WzComparerR2项目（R即有revision，也有rebuild的含义），并于2015年初开源至github。
+
+![old charasim](https://github.com/Kagamia/WzComparerX/blob/master/images/2-old-charasim.jpg)
 
 WzComparerR2在重构时，对原有wzextract中关于wz文件解析的部分完全重写，成为如今的wzlib，同时做了大量性能优化；裁剪了全部难以维护及不适宜公开的功能，如原来的角色面板模拟仅剩下了UI界面的空壳，仅保留装备道具的tooltip模拟，数据库功能全部移除，wz对比也由原来的UI显示简化为生成html报告；添加了更多“有趣”功能，如真正的补丁安装，音乐播放器，完整的地图模拟，纸娃娃模拟等。WzComparer比起“对比器”(comparer)，更多地成为了“仿真器”(simulator)而被大众所知了。
 
